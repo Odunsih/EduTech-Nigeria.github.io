@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00416A;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 200px;
+}
+
+form {
+    padding: 10px;
+    background-color: aliceblue;
+    box-shadow: 10px 10px 10px black;
+    border-top-left-radius: 20px;
+
+}
+
+label { 
+    display: block;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+label, input {
+    margin: 5px;
+    font-size: 20px;
+}
+
+p {
+    font-size: 15px;
+}
+
+#submit {
+    width: 100%;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: darkblue;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,164 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #00416A;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.li:hover {
+    color: antiquewhite
+}
+
+.li {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.auth-buttons .btn-login,
+.auth-buttons .btn-signup {
+    margin-left: 1rem;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('nig.webp') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+}
+
+.hero-section .btn-primary,
+.hero-section .btn-secondary {
+    margin: 1rem;
+   
+    font-size: 20px;
+    
+}
+
+/* About Section */
+.about-section {
+    background-color: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Courses Section */
+.courses-section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.course-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+/* Features Section */
+.features-section {
+    padding: 2rem 0;
+}
+
+/* How It Works */
+.how-it-works-section {
+    background-color: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: #00416A;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Hamburger menu styling */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.nav-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Show hamburger menu only on small screens */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+    }
+    .nav-links.active {
+        display: block;
+    }
+}
+/* Style testimonials to stack and be hidden initially */
+
+.testimonial {
+
+    display: none;
+
+}
+
+.testimonial:first-child {
+
+    display: block;
+
+}
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .course-cards, .features-grid, .steps {
+        flex-direction: column;
+    }
+}

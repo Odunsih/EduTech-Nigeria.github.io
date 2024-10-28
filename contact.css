@@ -1,0 +1,78 @@
+body {
+    background-image: url(nig.webp);
+}
+
+.navbar {
+    background-color: #00416A;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: antiquewhite;
+}
+
+.contact {
+    width: 50%;
+    margin: auto;
+    background-color: #00416A;
+    padding: 50px;
+}
+
+form {
+    background-color: #00416A;
+    
+}
+
+h2 {
+    text-align: center;
+    color: rgb(238, 164, 67);
+    font-size: 25px;
+}
+
+h1 {
+    color: rgb(169, 169, 212);
+    font-size: 30px;
+}
+h2, h1 {
+    text-transform: uppercase;
+}
+
+p {
+    text-align: center;
+    color: wheat;
+}
+
+input {
+    width: 100%;
+    font-size: 20px;
+    padding: 5px;
+    background-color: #00416A;
+    margin: 10px;
+    color: antiquewhite;
+}
+
+.submit {
+    color: #00416A;
+}
+.submit:hover {
+    background-color: #fff;
+    border-radius: 10px;
+}
