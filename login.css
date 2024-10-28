@@ -44,3 +44,34 @@ p {
     border-radius: 10px;
 }
 
+@media (max-width: 600px) {
+
+    body {
+        width: min(600px, 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        
+    }
+ 
+    div {
+        display: flex;
+        width: min(600px, 100%);
+        align-items: center;
+        justify-content: center;
+        margin: 200px 0 0;
+    }
+
+    form {
+        width: min(600px, 100%);
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    input {
+        width: min(600px, 98%);
+    }
+
+}
