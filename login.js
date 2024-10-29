@@ -12,6 +12,6 @@ loginForm.addEventListener('submit', function(event) {
         alert('Login Successful');
         window.location.href = "homepage.html"; // Redirect to the dashboard page
     } else {
-        alert('Invalid username or password. Please try again.');
+        alert('Invalid email or password. Please try again.');
     }
 });
