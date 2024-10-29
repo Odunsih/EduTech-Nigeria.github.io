@@ -12,8 +12,8 @@ let email = document.getElementById("email");
 function reg() {
     if (password.value !== confirmPassword.value)
          alert("password does not match" );
-    else
-    alert("Successfully sign up");
+    //else
+    //alert("Successfully sign up");
     
 }
 
