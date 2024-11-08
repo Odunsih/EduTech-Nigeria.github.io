@@ -4,20 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="aos-master/dist/aos.css">
     <title>login</title>
 </head>
 <body>
-    <div>
-        <form action="" id="login">
+    <header data-aos="fade-down" class="navbar">
+        <div class="container-1">
+            <h1 class="logo">EduTech-Nigeria</h1>
+            <!-- <nav>
+                <ul class="nav-links">
+                    <li><a href="homepage.html">Home ></a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav> -->
+        </div>
+    </header>
+    <div class="container">
+        <form data-aos="fade-right" action="" id="login">
             <h2>Login</h2>
             <label for="">Email:</label>
             <input type="text" name="email" id="email" placeholder="abc@gmail.com" required><br>
             <label for="">Password:</label>
             <input type="password" name="password" id="password" placeholder="******" required><br>
             <input type="submit" id="submit" value="Login">
-            <p>New to Edu-Tech Nig? <a href="./index.html">Sign up</a></p>
+            <p>New to Edu-Tech Nig? <a href="./reg.html">Sign up</a></p>
         </form>
+
+        <div class="img" data-aos="fade-left">
+            <img src="sign-in.png" alt="image">
+        </div>
     </div>
+    
+   <!-- Popup Modal -->
+<div id="popupMessage" class="popup hidden">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <p id="popupText">This is a popup message!</p>
+    </div>
+</div>
+<script src="aos-master/dist/aos.js"></script>
+<script>
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  </script>
 </body>
 <script src="login.js"></script>
 </html>
