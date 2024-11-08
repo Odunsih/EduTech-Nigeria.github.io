@@ -1,31 +1,53 @@
+
+
 let confirmPassword = document.getElementById("confirmPassword");
 let password = document.getElementById("password");
-let username = document.getElementById("username");
+let firstname = document.getElementById("firstname");
+let lastname = document.getElementById("lastname");
 let email = document.getElementById("email");
-
-//function reg() {
-  //  if (!username.value && email.value && password.value && confirmPassword.value)
-    //    alert("please, fill in all the field");
-//}
-
-
-function reg() {
-    if (password.value !== confirmPassword.value)
-         alert("password does not match" );
-    //else
-    //alert("Successfully sign up");
-    
-}
-
 const form = document.getElementById('reg');
+
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+
+    // Check if all fields are filled
+    if (!firstname.value || !lastname.value || !email.value || !password.value || !confirmPassword.value) {
+        showPopup("Please fill in all the fields");
+        return;
+    }
+
+    // Check if passwords match
+    if (password.value !== confirmPassword.value) {
+        showPopup("Passwords do not match");
+        return;
+    }
 
     // Save user data in localStorage
-    localStorage.setItem('user', JSON.stringify({ username, email, password }));
-    alert('Registration Successful!');
+    const user = {
+        firstname: firstname.value,
+        lastname: lastname.value,
+        email: email.value,
+        password: password.value
+    };
+    localStorage.setItem('user', JSON.stringify(user));
+    
+    showPopup("Registration Successful!");
+
+    // Redirect to login after 2 seconds
+    setTimeout(() => {
+        window.location.href = "login.html";
+    }, 1000);
 });
+
+// Popup function for displaying messages
+function showPopup(message) {
+    document.getElementById("popupText").textContent = message;
+    document.getElementById("popupMessage").classList.remove("hidden");
+
+    // Hide the popup automatically after 3 seconds
+    setTimeout(closePopup, 3000);
+}
+
+function closePopup() {
+    document.getElementById("popupMessage").classList.add("hidden");
+}
